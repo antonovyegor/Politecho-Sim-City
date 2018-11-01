@@ -81,7 +81,10 @@ namespace PoliCityEm.Controllers
         }
 
 
-        public IHttpActionResult PostNewStudent(UserViewModel user)
+        public IHttpActionResult PostNewStudent(UserViewModel user) /* TODO: DELETE
+            так не пойдёт. Ты даёшь мне возможность создавать сколько угодно юзеров. Этот роут нужно убрать.
+            Создать юзера можно только при регистрации. В методе регистрации будет валидация имейла пароля и всего прочего
+        */
         {
             if (!ModelState.IsValid)
                 return BadRequest("Invalid data.");
@@ -118,7 +121,9 @@ namespace PoliCityEm.Controllers
 
 
 
-        public IHttpActionResult PutUser(UserViewModel user)
+        public IHttpActionResult PutUser(UserViewModel user) /* Так не делают. 
+            Если нужно изменить пароль, то для этого делается отдельный метод. 
+            А сейчас я из аппы смогу изменить количество денег или друзей. */
         {
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
