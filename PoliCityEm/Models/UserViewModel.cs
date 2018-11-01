@@ -14,7 +14,7 @@ namespace PoliCityEm.Controllers
         public CityViewModel city { get; set; }
         public int points { get; set; }
        
-        public List<int> Friends { get; set; }
+        public List<int> Friends { get; set; } //TODO: make as List of UserViewModel
 
         public UserViewModel(string name, string password)
         {
